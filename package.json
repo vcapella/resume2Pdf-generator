@@ -1,0 +1,25 @@
+{
+  "name": "resume-to-pdf-generator",
+  "version": "1.0.0",
+  "description": "It generates a pdf file in a resume format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm start",
+    "backend": "cd server && nodemon index.js",
+    "dev": "concurrently \"npm run backend\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vcapella/resume2Pdf-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vcapella/resume2Pdf-generator/issues"
+  },
+  "homepage": "https://github.com/vcapella/resume2Pdf-generator#readme",
+  "dependencies": {
+    "concurrently": "^7.2.2"
+  }
+}
