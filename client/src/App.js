@@ -6,8 +6,8 @@ import { useState } from "react";
 function App() {
   //useState
   const [formValue, setFormValue] = useState({
-    name: "",
-    receiptId: 0,
+    yourName: "",
+    city: "",
     price1: 0,
     price2: 0,
   });
@@ -24,7 +24,7 @@ function App() {
   };
 
   //value for each input
-  const { name, receiptId, price1, price2 } = formValue;
+  const { yourName, city, price1, price2 } = formValue;
 
   //blobs are immutable objects that represent raw data
   //save function
@@ -42,17 +42,17 @@ function App() {
     <div className="App">
       <input
         type="text"
-        placeholder="Name"
-        name="name"
+        placeholder="Enter your name."
+        name="yourName"
         onChange={handleChange}
-        value={name}
+        value={yourName}
       />
       <input
-        type="number"
-        placeholder="Receipt ID"
-        name="receiptId"
+        type="text"
+        placeholder="Enter your city."
+        name="city"
         onChange={handleChange}
-        value={receiptId}
+        value={city}
       />
       <input
         type="number"

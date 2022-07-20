@@ -1,135 +1,775 @@
-module.exports = ({ name, price1, price2, receiptId }) => {
+module.exports = ({
+  yourName,
+  city,
+  stateProvince,
+  celNumber,
+  emailAdd,
+  linkedinUrl,
+  anotherUrl,
+  personalSummary,
+  titlePosition1,
+  companyName1,
+  cityCompany1,
+  stateCompany1,
+  startDate1,
+  endDate1,
+  listAccomp1A,
+  listAccomp1B,
+  listAccomp1C,
+  listAccomp1D,
+  listAccomp1E,
+  listAccomp1F,
+  titlePosition2,
+  companyName2,
+  cityCompany2,
+  stateCompany2,
+  startDate2,
+  endDate2,
+  listAccomp2A,
+  listAccomp2B,
+  listAccomp2C,
+  listAccomp2D,
+  listAccomp2E,
+  listAccomp2F,
+  listOfSkills,
+  gradYear1,
+  schoolName1,
+  stateSchool1,
+  aboutSchoolProgram1,
+  extraAcademicInfo1,
+}) => {
   const today = new Date();
   return `
-    <!doctype html>
+  <!doctype html>
     <html>
     <head>
-        <meta charset="utf-8">
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
         <title>PDF Result Template</title>
-        <style>
-            .invoice-box {
-            max-width: 800px;
-            margin: auto;
-            padding: 30px;
-            border: 1px solid #eee;
-            box-shadow: 0 0 10px rgba(0, 0, 0, .15);
-            font-size: 16px;
-            line-height: 24px;
-            font-family: 'Helvetica Neue', 'Helvetica',
-            color: #555;
-            }
-            .margin-top {
-            margin-top: 50px;
-            }
-            .justify-center {
-            text-align: center;
-            }
-            .invoice-box table {
-            width: 100%;
-            line-height: inherit;
-            text-align: left;
-            }
-            .invoice-box table td {
-            padding: 5px;
+        <style type="text/css">
+        @import url("https://themes.googleusercontent.com/fonts/css?kit=knc_LPZOyWMIVUOAHtqrZ2NQTOLSEGcCdrjcqYKOxCiS2OSYxxbQPS2CdbrB38uudOYeWerJrOtq8e3SglwKUggq4e-JcyP5MZMwiJmM9y2cEY2kHfXeLU-aZchFk2I94g4cOL92w3tTp5tMGK78u2u2aNZ7mRx4xDX5ScSfAk8");
+        
+        ul.lst-kix_77hv043s1soz-1 {
+            list-style-type: none;
+        }
+        ul.lst-kix_77hv043s1soz-0 {
+            list-style-type: none;
+        }
+        
+        ul.lst-kix_jpbygd87hm9n-4 {
+            list-style-type: none;
+        }
+        ul.lst-kix_jpbygd87hm9n-5 {
+            list-style-type: none;
+        }
+        ul.lst-kix_jpbygd87hm9n-2 {
+            list-style-type: none;
+        }
+        ul.lst-kix_jpbygd87hm9n-3 {
+            list-style-type: none;
+        }
+        ul.lst-kix_jpbygd87hm9n-0 {
+            list-style-type: none;
+        }
+        ul.lst-kix_jpbygd87hm9n-1 {
+            list-style-type: none;
+        }
+        
+        ul.lst-kix_sn3et3leb3bv-1 {
+            list-style-type: none;
+        }
+        ul.lst-kix_sn3et3leb3bv-2 {
+            list-style-type: none;
+        }
+        ul.lst-kix_yh2gwcck2a0g-8 {
+            list-style-type: none;
+        }
+        ul.lst-kix_sn3et3leb3bv-0 {
+            list-style-type: none;
+        }
+        
+        ul.lst-kix_yh2gwcck2a0g-7 {
+            list-style-type: none;
+        }
+        ul.lst-kix_sn3et3leb3bv-5 {
+            list-style-type: none;
+        }
+        ul.lst-kix_yh2gwcck2a0g-6 {
+            list-style-type: none;
+        }
+        ul.lst-kix_jpbygd87hm9n-8 {
+            list-style-type: none;
+        }
+        ul.lst-kix_sn3et3leb3bv-6 {
+            list-style-type: none;
+        }
+        ul.lst-kix_yh2gwcck2a0g-5 {
+            list-style-type: none;
+        }
+        ul.lst-kix_sn3et3leb3bv-3 {
+            list-style-type: none;
+        }
+        ul.lst-kix_yh2gwcck2a0g-4 {
+            list-style-type: none;
+        }
+        ul.lst-kix_jpbygd87hm9n-6 {
+            list-style-type: none;
+        }
+        ul.lst-kix_sn3et3leb3bv-4 {
+            list-style-type: none;
+        }
+        ul.lst-kix_yh2gwcck2a0g-3 {
+            list-style-type: none;
+        }
+        
+        ul.lst-kix_jpbygd87hm9n-7 {
+            list-style-type: none;
+        }
+        ul.lst-kix_sn3et3leb3bv-7 {
+            list-style-type: none;
+        }
+        ul.lst-kix_sn3et3leb3bv-8 {
+            list-style-type: none;
+        }
+        
+        ul.lst-kix_wsxuof5tp1m9-0 {
+            list-style-type: none;
+        }
+        
+        ul.lst-kix_wsxuof5tp1m9-2 {
+            list-style-type: none;
+        }
+        
+        ul.lst-kix_wsxuof5tp1m9-1 {
+            list-style-type: none;
+        }
+        ul.lst-kix_wsxuof5tp1m9-4 {
+            list-style-type: none;
+        }
+        ul.lst-kix_wsxuof5tp1m9-3 {
+            list-style-type: none;
+        }
+        ul.lst-kix_yh2gwcck2a0g-2 {
+            list-style-type: none;
+        }
+        
+        ul.lst-kix_yh2gwcck2a0g-1 {
+            list-style-type: none;
+        }
+        ul.lst-kix_yh2gwcck2a0g-0 {
+            list-style-type: none;
+        }
+        
+        li.li-bullet-0:before {
+            margin-left: -18pt;
+            white-space: nowrap;
+            display: inline-block;
+            min-width: 18pt;
+        }
+        
+        ul.lst-kix_wsxuof5tp1m9-6 {
+            list-style-type: none;
+        }
+        ul.lst-kix_wsxuof5tp1m9-5 {
+            list-style-type: none;
+        }
+        ul.lst-kix_wsxuof5tp1m9-8 {
+            list-style-type: none;
+        }
+        ul.lst-kix_wsxuof5tp1m9-7 {
+            list-style-type: none;
+        }
+        
+        ul.lst-kix_77hv043s1soz-7 {
+            list-style-type: none;
+        }
+        
+        ul.lst-kix_77hv043s1soz-6 {
+            list-style-type: none;
+        }
+        
+        ul.lst-kix_77hv043s1soz-8 {
+            list-style-type: none;
+        }
+        ul.lst-kix_77hv043s1soz-3 {
+            list-style-type: none;
+        }
+        
+        ul.lst-kix_77hv043s1soz-2 {
+            list-style-type: none;
+        }
+        ul.lst-kix_77hv043s1soz-5 {
+            list-style-type: none;
+        }
+        
+        ul.lst-kix_77hv043s1soz-4 {
+            list-style-type: none;
+        }
+        ol {
+            margin: 0;
+            padding: 0;
+        }
+        table td,
+        table th {
+            padding: 0;
+        }
+        .c5 {
+            border-right-style: solid;
+            padding: 2.2pt 2.2pt 2.2pt 2.2pt;
+            border-bottom-color: #1c4587;
+            border-top-width: 0pt;
+            border-right-width: 0pt;
+            border-left-color: #000000;
             vertical-align: top;
-            }
-            .invoice-box table tr td:nth-child(2) {
-            text-align: right;
-            }
-            .invoice-box table tr.top table td {
-            padding-bottom: 20px;
-            }
-            .invoice-box table tr.top table td.title {
-            font-size: 45px;
-            line-height: 45px;
-            color: #333;
-            }
-            .invoice-box table tr.information table td {
-            padding-bottom: 40px;
-            }
-            .invoice-box table tr.heading td {
-            background: #eee;
-            border-bottom: 1px solid #ddd;
-            font-weight: bold;
-            }
-            .invoice-box table tr.details td {
-            padding-bottom: 20px;
-            }
-            .invoice-box table tr.item td {
-            border-bottom: 1px solid #eee;
-            }
-            .invoice-box table tr.item.last td {
-            border-bottom: none;
-            }
-            .invoice-box table tr.total td:nth-child(2) {
-            border-top: 2px solid #eee;
-            font-weight: bold;
-            }
-            @media only screen and (max-width: 600px) {
-            .invoice-box table tr.top table td {
-            width: 100%;
-            display: block;
-            text-align: center;
-            }
-            .invoice-box table tr.information table td {
-            width: 100%;
-            display: block;
-            text-align: center;
-            }
-            }
+            border-right-color: #000000;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 1pt;
+            width: 468pt;
+            border-top-color: #cccccc;
+            border-bottom-style: solid;
+        }
+        .c10 {
+            border-right-style: solid;
+            padding: 2.2pt 2.2pt 2.2pt 2.2pt;
+            border-bottom-color: #cccccc;
+            border-top-width: 1pt;
+            border-right-width: 0pt;
+            border-left-color: #000000;
+            vertical-align: top;
+            border-right-color: #000000;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            width: 468pt;
+            border-top-color: #1c4587;
+            border-bottom-style: solid;
+        }
+        .c28 {
+            border-right-style: solid;
+            padding: 2.2pt 2.2pt 2.2pt 2.2pt;
+            border-bottom-color: #cccccc;
+            border-top-width: 0pt;
+            border-right-width: 0pt;
+            border-left-color: #000000;
+            vertical-align: top;
+            border-right-color: #000000;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            width: 468pt;
+            border-top-color: #6aa84f;
+            border-bottom-style: solid;
+        }
+        .c29 {
+            border-right-style: solid;
+            padding: 2.2pt 2.2pt 2.2pt 2.2pt;
+            border-bottom-color: #6aa84f;
+            border-top-width: 0pt;
+            border-right-width: 0pt;
+            border-left-color: #000000;
+            vertical-align: top;
+            border-right-color: #000000;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            width: 468pt;
+            border-top-color: #000000;
+            border-bottom-style: solid;
+        }
+        .c14 {
+            color: #666666;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 8pt;
+            font-family: "Roboto";
+            font-style: normal;
+        }
+        .c25 {
+            color: #ff0000;
+            font-weight: 700;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 10pt;
+            font-family: "Proxima Nova";
+            font-style: normal;
+        }
+        .c20 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 37pt;
+            font-family: "Roboto";
+            font-style: normal;
+        }
+        .c1 {
+            color: #000000;
+            font-weight: 700;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 10pt;
+            font-family: "Roboto Condensed";
+            font-style: normal;
+        }
+        .c12 {
+            color: #000000;
+            font-weight: 300;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 10pt;
+            font-family: "Roboto";
+            font-style: normal;
+        }
+        .c7 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 10pt;
+            font-family: "Lato";
+            font-style: normal;
+        }
+        .c22 {
+            color: #000000;
+            font-weight: 700;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 1pt;
+            font-family: "Roboto Condensed";
+            font-style: normal;
+        }
+        .c9 {
+            padding-top: 20pt;
+            padding-bottom: 0pt;
+            line-height: 1;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+        }
+        .c4 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.25;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+        }
+        .c26 {
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 8pt;
+            font-family: "Pinyon Script";
+            font-style: normal;
+        }
+        .c13 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+        }
+        .c32 {
+            font-weight: 300;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 10pt;
+            font-family: "Roboto";
+            font-style: normal;
+        }
+        .c31 {
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 8pt;
+            font-family: "Roboto";
+            font-style: normal;
+        }
+        .c17 {
+            font-size: 10pt;
+            font-family: "Roboto";
+            color: #000000;
+            font-weight: 500;
+        }
+        .c27 {
+            border-spacing: 0;
+            border-collapse: collapse;
+            margin-right: auto;
+        }
+        .c33 {
+            background-color: #ffffff;
+            max-width: 468pt;
+            padding: 36pt 72pt 36pt 72pt;
+        }
+        .c19 {
+            font-family: "Roboto";
+            color: #666666;
+            font-weight: 400;
+        }
+        .c21 {
+            font-size: 24pt;
+            font-family: "Roboto Condensed";
+            font-weight: 700;
+        }
+        .c8 {
+            font-size: 9pt;
+            font-family: "Roboto";
+            font-weight: 400;
+        }
+        .c23 {
+            font-weight: 700;
+            font-family: "Roboto";
+        }
+        .c6 {
+            margin-left: 36pt;
+            padding-left: 0pt;
+        }
+        .c2 {
+            padding: 0;
+            margin: 0;
+        }
+        .c3 {
+            color: inherit;
+            text-decoration: inherit;
+        }
+        .c24 {
+            color: #000000;
+        }
+        .c11 {
+            height: 7pt;
+        }
+        .c15 {
+            page-break-after: avoid;
+        }
+        .c0 {
+            height: 9pt;
+        }
+        .c34 {
+            height: 26.2pt;
+        }
+        .c16 {
+            color: #0b5394;
+        }
+        .c30 {
+            height: 0pt;
+        }
+        .c18 {
+            height: 10pt;
+        }
+        .title {
+            padding-top: 20pt;
+            color: #6aa84f;
+            font-weight: 700;
+            font-size: 10pt;
+            padding-bottom: 0pt;
+            font-family: "Roboto Condensed";
+            line-height: 1;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+        }
+        .subtitle {
+            padding-top: 0pt;
+            color: #b7b7b7;
+            font-weight: 300;
+            font-size: 8pt;
+            padding-bottom: 0pt;
+            font-family: "Lato";
+            line-height: 1.25;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+        }
+        li {
+            color: #000000;
+            font-weight: 300;
+            font-size: 10pt;
+            font-family: "Roboto";
+        }
+        p {
+            margin: 0;
+            color: #000000;
+            font-weight: 300;
+            font-size: 10pt;
+            font-family: "Roboto";
+        }
+        h1 {
+            padding-top: 20pt;
+            color: #000000;
+            font-weight: 300;
+            font-size: 20pt;
+            padding-bottom: 6pt;
+            font-family: "Roboto";
+            line-height: 1.25;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+        }
+        h2 {
+            padding-top: 18pt;
+            color: #000000;
+            font-weight: 300;
+            font-size: 16pt;
+            padding-bottom: 6pt;
+            font-family: "Roboto";
+            line-height: 1.25;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+        }
+        h3 {
+            padding-top: 16pt;
+            color: #434343;
+            font-weight: 300;
+            font-size: 14pt;
+            padding-bottom: 4pt;
+            font-family: "Roboto";
+            line-height: 1.25;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+        }
+        h4 {
+            padding-top: 14pt;
+            color: #666666;
+            font-weight: 300;
+            font-size: 12pt;
+            padding-bottom: 4pt;
+            font-family: "Roboto";
+            line-height: 1.25;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+        }
+        h5 {
+            padding-top: 12pt;
+            color: #666666;
+            font-weight: 300;
+            font-size: 11pt;
+            padding-bottom: 4pt;
+            font-family: "Roboto";
+            line-height: 1.25;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+        }
+        h6 {
+            padding-top: 12pt;
+            color: #666666;
+            font-weight: 300;
+            font-size: 11pt;
+            padding-bottom: 4pt;
+            font-family: "Roboto";
+            line-height: 1.25;
+            page-break-after: avoid;
+            font-style: italic;
+            orphans: 2;
+            widows: 2;
+            text-align: left;
+        }
         </style>
     </head>
-    <body>
-        <div class="invoice-box">
-            <table cellpadding="0" cellspacing="0">
-                <tr class="top">
-                <td colspan="2">
-                    <table>
-                        <tr>
-                            <td class="title"><img  src="https://i2.wp.com/cleverlogos.co/wp-content/uploads/2018/05/reciepthound_1.jpg?fit=800%2C600&ssl=1"
-                            style="width:100%; max-width:156px;"></td>
-                            <td>
-                            Datum: ${`${today.getDate()}. ${
-                              today.getMonth() + 1
-                            }. ${today.getFullYear()}.`}
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-                </tr>
-                <tr class="information">
-                <td colspan="2">
-                    <table>
-                        <tr>
-                            <td>
-                            Customer name: ${name}
-                            </td>
-                            <td>
-                            Receipt number: ${receiptId}
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-                </tr>
-                <tr class="heading">
-                <td>Bought items:</td>
-                <td>Price</td>
-                </tr>
-                <tr class="item">
-                <td>First item:</td>
-                <td>${price1}$</td>
-                </tr>
-                <tr class="item">
-                <td>Second item:</td>
-                <td>${price2}$</td>
-                </tr>
-            </table>
-            <br />
-            <h1 class="justify-center">Total price: ${
-              parseInt(price1) + parseInt(price2)
-            }$</h1>
+    <body class="c33">
+        <div>
+        <p class="c4 c18"><span class="c25"></span></p>
         </div>
+        <p class="c4 c18"><span class="c24 c26"></span></p>
+        <a id="t.00e5740775ba55e54e5cc56f89f2eb9945cdf239"></a><a id="t.0"></a>
+        <table class="c27">
+        <tr class="c11">
+            <td class="c29" colspan="1" rowspan="1">
+            <p class="c13">
+                <span class="c21">${yourName}</span>
+            </p>
+            </td>
+        </tr>
+        <tr class="c34">
+            <td class="c28" colspan="1" rowspan="1">
+            <p class="c13">
+                <span class="c8">${city}, ${stateProvince} | cel:${celNumber} | Email:${emailAdd}</span>
+            </p>
+            </td>
+        </tr>
+        <tr class="c30">
+            <td class="c5" colspan="1" rowspan="1">
+            <p class="c9 title" id="h.paz0u2w1r2kx">
+                <span class="c24">SOCIAL MEDIA</span>
+            </p>
+            </td>
+        </tr>
+        <tr class="c0">
+            <td class="c10" colspan="1" rowspan="1">
+            <p class="c4">
+                <span class="c16"
+                ><a
+                    class="c3"
+                    href="https://www.google.com/url?q=http://linkedin.com&amp;sa=D&amp;source=editors&amp;ust=1657143298721414&amp;usg=AOvVaw0vcndH3QhgOjbnfBAYHAsL"
+                    >${linkedinUrl}</a
+                ></span
+                ><span class="c16">&nbsp;</span><span class="c23">|</span
+                ><span>&nbsp;</span
+                ><span class="c16"
+                ><a
+                    class="c3"
+                    href="https://www.google.com/url?q=http://twitter.com&amp;sa=D&amp;source=editors&amp;ust=1657143298721857&amp;usg=AOvVaw0wQBitXZzqaDyFtkMQM-4l"
+                    >${anotherUrl}</a
+                ></span
+                >
+            </p>
+            </td>
+        </tr>
+        <tr class="c0">
+            <td class="c5" colspan="1" rowspan="1">
+            <p class="c9 title" id="h.f5j6i7o2ny56">
+                <span class="c1">SUMMARY</span>
+            </p>
+            </td>
+        </tr>
+        <tr class="c0">
+            <td class="c10" colspan="1" rowspan="1">
+            <p class="c4"><span class="c12">${personalSummary}</span></p>
+            </td>
+        </tr>
+        <tr class="c0">
+            <td class="c5" colspan="1" rowspan="1">
+            <p class="c9 title" id="h.kck6zkyo5xrr">
+                <span class="c1">PROFESSIONAL EXPERIENCE</span>
+            </p>
+            </td>
+        </tr>
+        <tr class="c0">
+            <td class="c10" colspan="1" rowspan="1">
+            <p class="c4 c15 subtitle" id="h.y61q8obx5qn5">
+                <span class="c17">${titlePosition1}</span
+                ><span class="c12">, ${companyName1}, ${cityCompany1}, ${stateCompany1}</span>
+            </p>
+            <p class="c4 c15 subtitle" id="h.9n5l13d32ok4">
+                <span class="c19">${startDate1} &ndash; ${endDate1}</span>
+            </p>
+            <p class="c4 c18"><span class="c12"></span></p>
+            <ul class="c2 lst-kix_77hv043s1soz-0 start">
+                <li class="c4 c6 li-bullet-0">
+                <span class="c12"
+                    >${listAccomp1A}</span
+                >
+                </li>
+                <li class="c4 c6 li-bullet-0">
+                <span class="c12"
+                    >${listAccomp1B}</span
+                >
+                </li>
+                <li class="c4 c6 li-bullet-0">
+                <span class="c12">${listAccomp1C}</span>
+                </li>
+                <li class="c4 c6 li-bullet-0">
+                <span class="c12">${listAccomp1D}</span>
+                </li>
+                <li class="c4 c6 li-bullet-0">
+                <span class="c12"
+                    >${listAccomp1E}</span
+                >
+                </li>
+                <li class="c4 c6 li-bullet-0">
+                <span class="c12">${listAccomp1F}</span>
+                </li>
+            </ul>
+            <p class="c4 c15 c18 subtitle" id="h.vb8h04p453h1">
+                <span class="c24 c31"></span>
+            </p>
+            <p class="c4 c15 subtitle" id="h.4wn18a1c0wt">
+                <span class="c17">${titlePosition2}</span
+                ><span class="c12">, ${companyName2}, ${cityCompany2}, ${stateCompany2}</span>
+            </p>
+            <p class="c4 c15 subtitle" id="h.7eoh0jwefi7m">
+                <span class="c14">${startDate2} &ndash; ${endDate2}</span>
+            </p>
+            <p class="c13 c18"><span class="c12"></span></p>
+            <ul class="c2 lst-kix_jpbygd87hm9n-0 start">
+                <li class="c4 c6 li-bullet-0">
+                <span class="c12"
+                    >${listAccomp2A}</span
+                >
+                </li>
+                <li class="c4 c6 li-bullet-0">
+                <span class="c12"
+                    >${listAccomp2B}</span
+                >
+                </li>
+                <li class="c4 c6 li-bullet-0">
+                <span class="c12">${listAccomp2C}</span>
+                </li>
+                <li class="c4 c6 li-bullet-0">
+                <span class="c12">${listAccomp2D}</span>
+                </li>
+                <li class="c4 c6 li-bullet-0">
+                <span class="c12"
+                    >${listAccomp2E}</span
+                >
+                </li>
+                <li class="c4 c6 li-bullet-0">
+                <span class="c12">${listAccomp2F}</span>
+                </li>
+            </ul>
+            </td>
+        </tr>
+        <tr class="c0">
+            <td class="c5" colspan="1" rowspan="1">
+            <p class="c9 title" id="h.6be5lj4njut5">
+                <span class="c1">SKILLS</span>
+            </p>
+            </td>
+        </tr>
+        <tr class="c0">
+            <td class="c10" colspan="1" rowspan="1">
+            <p class="c4">
+                <span class="c12"
+                >${listOfSkills}</span
+                >
+            </p>
+            </td>
+        </tr>
+        <tr class="c0">
+            <td class="c5" colspan="1" rowspan="1">
+            <p class="c9 title" id="h.ybkgiuoecxtu">
+                <span class="c1">EDUCATION</span>
+            </p>
+            </td>
+        </tr>
+        <tr class="c0">
+            <td class="c10" colspan="1" rowspan="1">
+            <p class="c4 c15 subtitle" id="h.yggafjpzisy">
+                <span class="c14">${gradYear1}</span>
+            </p>
+            <p class="c13 c18"><span class="c12"></span></p>
+            <p class="c4"><span class="c12">${schoolName1}, ${stateSchool1}</span></p>
+            <p class="c4">
+                <span class="c12"
+                >${aboutSchoolProgram1}</span
+                >
+            </p>
+            <p class="c4"><span class="c12">${extraAcademicInfo1}</span></p>
+            </td>
+        </tr>
+        </table>
+        <p class="c4 c18"><span class="c7"></span></p>
+        <p class="c4 c18"><span class="c7"></span></p>
+        <p class="c4 c18"><span class="c7"></span></p>
     </body>
     </html>
+
     `;
 };
