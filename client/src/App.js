@@ -421,7 +421,7 @@ function App() {
           </label>
         </div>
         <div className="professionalExp2">
-          <h2>Skills & Education</h2>
+          <h2>Education</h2>
           <label>
             Skills
             <input
@@ -434,7 +434,7 @@ function App() {
           </label>
 
           <label>
-            Education
+            School name
             <input
               type="text"
               placeholder="School name eg: University of Toronto"
@@ -442,6 +442,9 @@ function App() {
               onChange={handleChange}
               value={schoolName1}
             />
+          </label>
+          <label>
+            School location
             <input
               type="text"
               placeholder="School location eg: ON, Canada"
@@ -449,6 +452,9 @@ function App() {
               onChange={handleChange}
               value={stateSchool1}
             />
+          </label>
+          <label>
+            School program
             <input
               type="text"
               placeholder="School program eg:BS Computer Science"
@@ -456,6 +462,9 @@ function App() {
               onChange={handleChange}
               value={aboutSchoolProgram1}
             />
+          </label>
+          <label>
+            Graduation year
             <input
               type="text"
               placeholder="Graduation year"
@@ -463,6 +472,9 @@ function App() {
               onChange={handleChange}
               value={gradYear1}
             />
+          </label>
+          <label>
+            Extra curricular activity
             <input
               type="text"
               placeholder="Write about any extra curricular activity or project."
