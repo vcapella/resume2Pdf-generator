@@ -164,6 +164,7 @@ module.exports = ({
             white-space: nowrap;
             display: inline-block;
             min-width: 18pt;
+            max-width: 360pt;
         }
         
         ul.lst-kix_wsxuof5tp1m9-6 {
@@ -317,6 +318,7 @@ module.exports = ({
             font-style: normal;
         }
         .c12 {
+            max-width: 200pt;
             color: #000000;
             font-weight: 300;
             text-decoration: none;
@@ -353,6 +355,7 @@ module.exports = ({
             text-align: left;
         }
         .c4 {
+            max-width: 360pt;
             padding-top: 0pt;
             padding-bottom: 0pt;
             line-height: 1.25;
@@ -405,8 +408,8 @@ module.exports = ({
         }
         .c33 {
             background-color: #ffffff;
-            max-width: 468pt;
-            padding: 36pt 72pt 36pt 72pt;
+             max-width: 360pt;
+            padding: 20pt 12pt 20pt 12pt;
         }
         .c19 {
             font-family: "Roboto";
@@ -428,7 +431,7 @@ module.exports = ({
             font-family: "Roboto";
         }
         .c6 {
-            margin-left: 36pt;
+            margin-left: 0pt;
             padding-left: 0pt;
         }
         .c2 {
