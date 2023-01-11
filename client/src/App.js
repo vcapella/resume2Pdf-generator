@@ -3,7 +3,8 @@ import axios from "axios";
 import { saveAs } from "file-saver";
 import { useState } from "react";
 import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+// import TextField from "@mui/material/TextField";
+import IntroductionForm from "./IntroductionForm";
 // import Input from "@mui/material/Input";
 
 function App() {
@@ -126,10 +127,23 @@ function App() {
       // onSubmit={createAndDownloadPdf}
     >
       {/* <form onSubmit={createAndDownloadPdf}> */}
+
       <div className="Introduction">
         <h2> Introduction</h2>
 
-        <TextField
+        <IntroductionForm
+          yourName={yourName}
+          handleChange={handleChange}
+          city={city}
+          stateProvince={stateProvince}
+          celNumber={celNumber}
+          emailAdd={emailAdd}
+          linkedinUrl={linkedinUrl}
+          anotherUrl={anotherUrl}
+          personalSummary={personalSummary}
+        />
+
+        {/* <TextField
           required
           id="yourName"
           label="First and Last Name"
@@ -138,9 +152,9 @@ function App() {
           // helperText="eg: Victor Capella"
           onChange={handleChange}
           value={yourName}
-        />
+        /> */}
 
-        <label>
+        {/* <label>
           Enter your city
           <input
             type="text"
@@ -149,9 +163,9 @@ function App() {
             onChange={handleChange}
             value={city}
           />
-        </label>
+        </label> */}
 
-        <label>
+        {/* <label>
           Enter your province
           <input
             type="text"
@@ -215,7 +229,7 @@ function App() {
             onChange={handleChange}
             value={personalSummary}
           />
-        </label>
+        </label> */}
       </div>
 
       <div className="professionalExp">
