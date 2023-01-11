@@ -26,7 +26,7 @@ export default function IntroductionForm ({handleChange, yourName, city, statePr
             />
             </label>
 
-            <label>
+        <label>
           Enter your province
           <input
             type="text"
