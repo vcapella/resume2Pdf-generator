@@ -2,7 +2,8 @@
 import TextField from "@mui/material/TextField";
 
 export default function IntroductionForm ({handleChange, yourName, city, stateProvince, celNumber, emailAdd, linkedinUrl, anotherUrl, personalSummary}) {
-    return (
+    
+  return (
         <div>
             <TextField
             required
@@ -11,42 +12,41 @@ export default function IntroductionForm ({handleChange, yourName, city, statePr
             placeholder="Victor Capella"
             name="yourName"
             // helperText="eg: Victor Capella"
+            inputProps={{ maxLength: 40 }}
             onChange={handleChange}
             value={yourName}
             />
 
-            <label>
-            Enter your city
-            <input
-                type="text"
-                placeholder="Toronto"
-                name="city"
-                onChange={handleChange}
-                value={city}
+            <TextField
+            id="city"
+            label="Your City"
+            placeholder="Toronto"
+            name="city"
+            inputProps={{ maxLength: 25 }}
+            onChange={handleChange}
+            value={city}
             />
-            </label>
 
-        <label>
-          Enter your province
-          <input
-            type="text"
+            <TextField
+            id="stateProvince"
+            label="Your Province"
             placeholder="ON"
             name="stateProvince"
+            inputProps={{ maxLength: 2 }}
+            // onChange={(event) => handleChange(event)}  //test not working
             onChange={handleChange}
             value={stateProvince}
-          />
-        </label>
+            />
 
-        <label>
-          Enter your phone number
-          <input
-            type="number"
-            placeholder="555-555-5555"
-            name="celNumber"
-            onChange={handleChange}
-            value={celNumber}
+          <TextField
+          id="celNumber"
+          label="Phone Number"
+          placeholder="555-123-4567"
+          name="celNumber"
+          inputProps={{ maxLength: 12 }}
+          onChange={handleChange}
+          value={celNumber}
           />
-        </label>
 
         <label>
           Enter your e-mail

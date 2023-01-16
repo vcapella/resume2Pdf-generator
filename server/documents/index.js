@@ -596,14 +596,14 @@ module.exports = ({
         <tr class="c11">
             <td class="c29" colspan="1" rowspan="1">
             <p class="c13">
-                <span class="c21">${yourName}</span>
+                <span class="c21" style="text-transform: capitalize;">${yourName}</span>
             </p>
             </td>
         </tr>
         <tr class="c34">
             <td class="c28" colspan="1" rowspan="1">
             <p class="c13">
-                <span class="c8">${city}, ${stateProvince} | cel:${celNumber} | Email:${emailAdd}</span>
+                <span class="c8"><span style="text-transform: capitalize;">${city}</span>, <span style="text-transform: uppercase;">${stateProvince}</span> | Phone:${celNumber} | Email:${emailAdd}</span>
             </p>
             </td>
         </tr>
