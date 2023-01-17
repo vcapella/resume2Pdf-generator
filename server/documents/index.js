@@ -408,7 +408,7 @@ module.exports = ({
         }
         .c33 {
             background-color: #ffffff;
-             max-width: 360pt;
+            max-width: 360pt;
             padding: 20pt 12pt 20pt 12pt;
         }
         .c19 {
@@ -455,7 +455,7 @@ module.exports = ({
             height: 9pt;
         }
         .c34 {
-            height: 26.2pt;
+            height: 12.2pt; //original height 26.2pt
         }
         .c16 {
             color: #0b5394;
@@ -603,7 +603,7 @@ module.exports = ({
         <tr class="c34">
             <td class="c28" colspan="1" rowspan="1">
             <p class="c13">
-                <span class="c8"><span style="text-transform: capitalize;">${city}</span>, <span style="text-transform: uppercase;">${stateProvince}</span> | Phone:${celNumber} | Email:${emailAdd}</span>
+                <span class="c8"><span style="text-transform: capitalize;">${city}</span>, <span style="text-transform: uppercase;">${stateProvince}</span> | Phone: ${celNumber} | Email: ${emailAdd}</span>
             </p>
             </td>
         </tr>
@@ -620,7 +620,7 @@ module.exports = ({
                 <span class="c16"
                 ><a
                     class="c3"
-                    href="https://www.google.com/url?q=http://linkedin.com&amp;sa=D&amp;source=editors&amp;ust=1657143298721414&amp;usg=AOvVaw0vcndH3QhgOjbnfBAYHAsL"
+                    href="${linkedinUrl}"
                     >${linkedinUrl}</a
                 ></span
                 ><span class="c16">&nbsp;</span><span class="c23">|</span
@@ -628,7 +628,7 @@ module.exports = ({
                 ><span class="c16"
                 ><a
                     class="c3"
-                    href="https://www.google.com/url?q=http://twitter.com&amp;sa=D&amp;source=editors&amp;ust=1657143298721857&amp;usg=AOvVaw0wQBitXZzqaDyFtkMQM-4l"
+                    href="${anotherUrl}"
                     >${anotherUrl}</a
                 ></span
                 >
