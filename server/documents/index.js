@@ -215,7 +215,7 @@ module.exports = ({
         }
         .c5 {
             border-right-style: solid;
-            padding: 2.2pt 2.2pt 2.2pt 2.2pt;
+            padding: 1.2pt 2.2pt 1.2pt 2.2pt;
             border-bottom-color: #1c4587;
             border-top-width: 0pt;
             border-right-width: 0pt;
@@ -409,7 +409,7 @@ module.exports = ({
         .c33 {
             background-color: #ffffff;
             max-width: 360pt;
-            padding: 20pt 12pt 20pt 12pt;
+            padding: 4pt 12pt 10pt 35pt;
         }
         .c19 {
             font-family: "Roboto";
@@ -452,7 +452,7 @@ module.exports = ({
             page-break-after: avoid;
         }
         .c0 {
-            height: 9pt;
+            height: 5pt;
         }
         .c34 {
             height: 12.2pt; //original height 26.2pt
@@ -658,22 +658,18 @@ module.exports = ({
             <td class="c10" colspan="1" rowspan="1">
             <p class="c4 c15 subtitle" id="h.y61q8obx5qn5">
                 <span class="c17" style="text-transform: capitalize;">${titlePosition1}</span
-                ><span class="c12" style="text-transform: capitalize;">, ${companyName1}, ${cityCompany1}, <span style="text-transform: uppercase;">${stateCompany1}</span></span>
+                ><span class="c12" style="text-transform: capitalize;"> ${companyName1} ${cityCompany1} <span style="text-transform: uppercase;">${stateCompany1}</span></span>
             </p>
             <p class="c4 c15 subtitle" id="h.9n5l13d32ok4">
-                <span class="c19" style="text-transform: capitalize;">${startDate1} &ndash; ${endDate1}</span>
+                <span class="c19" style="text-transform: capitalize;">${startDate1}   ${endDate1}</span>
             </p>
             <p class="c4 c18"><span class="c12"></span></p>
             <ul class="c2 lst-kix_77hv043s1soz-0 start">
                 <li class="c4 c6 li-bullet-0">
-                <span class="c12"
-                    >${listAccomp1A}</span
-                >
+                <span class="c12">${listAccomp1A}</span>
                 </li>
                 <li class="c4 c6 li-bullet-0">
-                <span class="c12"
-                    >${listAccomp1B}</span
-                >
+                <span class="c12">${listAccomp1B}</span>
                 </li>
                 <li class="c4 c6 li-bullet-0">
                 <span class="c12">${listAccomp1C}</span>
@@ -682,35 +678,26 @@ module.exports = ({
                 <span class="c12">${listAccomp1D}</span>
                 </li>
                 <li class="c4 c6 li-bullet-0">
-                <span class="c12"
-                    >${listAccomp1E}</span
-                >
-                </li>
-                <li class="c4 c6 li-bullet-0">
-                <span class="c12">${listAccomp1F}</span>
+                <span class="c12">${listAccomp1E}</span>
                 </li>
             </ul>
             <p class="c4 c15 c18 subtitle" id="h.vb8h04p453h1">
                 <span class="c24 c31"></span>
             </p>
             <p class="c4 c15 subtitle" id="h.4wn18a1c0wt">
-                <span class="c17">${titlePosition2}</span
-                ><span class="c12">, ${companyName2}, ${cityCompany2}, ${stateCompany2}</span>
+                <span class="c17" style="text-transform: capitalize;">${titlePosition2}</span
+                ><span class="c12" style="text-transform: capitalize;"> ${companyName2} ${cityCompany2} <span style="text-transform: uppercase;">${stateCompany2}</span></span>
             </p>
             <p class="c4 c15 subtitle" id="h.7eoh0jwefi7m">
-                <span class="c14">${startDate2} &ndash; ${endDate2}</span>
+                <span class="c19" style="text-transform: capitalize;">${startDate2}   ${endDate2}</span>
             </p>
             <p class="c13 c18"><span class="c12"></span></p>
             <ul class="c2 lst-kix_jpbygd87hm9n-0 start">
                 <li class="c4 c6 li-bullet-0">
-                <span class="c12"
-                    >${listAccomp2A}</span
-                >
+                <span class="c12">${listAccomp2A}</span>
                 </li>
                 <li class="c4 c6 li-bullet-0">
-                <span class="c12"
-                    >${listAccomp2B}</span
-                >
+                <span class="c12">${listAccomp2B}</span>
                 </li>
                 <li class="c4 c6 li-bullet-0">
                 <span class="c12">${listAccomp2C}</span>
@@ -719,13 +706,11 @@ module.exports = ({
                 <span class="c12">${listAccomp2D}</span>
                 </li>
                 <li class="c4 c6 li-bullet-0">
-                <span class="c12"
-                    >${listAccomp2E}</span
-                >
+                <span class="c12">${listAccomp2E}</span>
                 </li>
-                <li class="c4 c6 li-bullet-0">
-                <span class="c12">${listAccomp2F}</span>
-                </li>
+                
+                
+                
             </ul>
             </td>
         </tr>
@@ -768,9 +753,7 @@ module.exports = ({
             </td>
         </tr>
         </table>
-        <p class="c4 c18"><span class="c7"></span></p>
-        <p class="c4 c18"><span class="c7"></span></p>
-        <p class="c4 c18"><span class="c7"></span></p>
+        
     </body>
     </html>
 

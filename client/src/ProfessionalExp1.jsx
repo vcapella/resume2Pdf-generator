@@ -69,7 +69,7 @@ export default function ProfessionalExp1 ({handleChange , titlePosition1, compan
             label="Accomplishment / Task"
             placeholder="List accomplishments, not responsibilities"
             name="listAccomp1A"
-            inputProps={{ maxLength: 120 }}
+            inputProps={{ maxLength: 83 }}
             onChange={handleChange}
             value={listAccomp1A}
             />
@@ -79,7 +79,7 @@ export default function ProfessionalExp1 ({handleChange , titlePosition1, compan
             label="Accomplishment / Task"
             placeholder="Make sure they’re written in a consistent form"
             name="listAccomp1B"
-            inputProps={{ maxLength: 120 }}
+            inputProps={{ maxLength: 83 }}
             onChange={handleChange}
             value={listAccomp1B}
             />
@@ -89,7 +89,7 @@ export default function ProfessionalExp1 ({handleChange , titlePosition1, compan
             label="Accomplishment / Task"
             placeholder="Use the active voice"
             name="listAccomp1C"
-            inputProps={{ maxLength: 120 }}
+            inputProps={{ maxLength: 83 }}
             onChange={handleChange}
             value={listAccomp1C}
             />
@@ -99,7 +99,7 @@ export default function ProfessionalExp1 ({handleChange , titlePosition1, compan
             label="Accomplishment / Task"
             placeholder="Quantify results wherever possible"
             name="listAccomp1D"
-            inputProps={{ maxLength: 120 }}
+            inputProps={{ maxLength: 83 }}
             onChange={handleChange}
             value={listAccomp1D}
             />
@@ -109,20 +109,20 @@ export default function ProfessionalExp1 ({handleChange , titlePosition1, compan
             label="Accomplishment / Task"
             placeholder="Match the language from the job description"
             name="listAccomp1E"
-            inputProps={{ maxLength: 120 }}
+            inputProps={{ maxLength: 83 }}
             onChange={handleChange}
             value={listAccomp1E}
             />
 
-            <TextField
+            {/* <TextField
             id="listAccomp1F"
             label="Accomplishment / Task"
             placeholder="Another Accomplishment"
             name="listAccomp1F"
-            inputProps={{ maxLength: 120 }}
+            inputProps={{ maxLength: 83 }}
             onChange={handleChange}
             value={listAccomp1F}
-            />
+            /> removed due to limited space */}
 
         </div>
     )

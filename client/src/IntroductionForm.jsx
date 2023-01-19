@@ -14,6 +14,7 @@ export default function IntroductionForm ({handleChange, yourName, city, statePr
       name="yourName"
       // helperText="eg: Victor Capella"
       inputProps={{ maxLength: 40 }}
+      style={{ width: 520}}
       onChange={handleChange}
       value={yourName}
       />
@@ -43,7 +44,7 @@ export default function IntroductionForm ({handleChange, yourName, city, statePr
       label="Phone Number"
       placeholder="555-123-4567"
       name="celNumber"
-      inputProps={{ maxLength: 12 }}
+      inputProps={{ maxLength: 20 }}
       onChange={handleChange}
       value={celNumber}
       />
@@ -77,13 +78,14 @@ export default function IntroductionForm ({handleChange, yourName, city, statePr
       />
 
       <TextField
-      id="outlined-textarea"
+      id="personalSummary"
       label="About Me"
       placeholder=""
       name="personalSummary"
       onChange={handleChange}
       value={personalSummary}
       style={{ width: 520, maxLength: 1000 }}
+      inputProps={{ maxLength: 410 }}
       // each field has width 250 +20 width gap between each
       multiline
       />
