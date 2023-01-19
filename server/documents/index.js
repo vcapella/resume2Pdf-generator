@@ -657,11 +657,11 @@ module.exports = ({
         <tr class="c0">
             <td class="c10" colspan="1" rowspan="1">
             <p class="c4 c15 subtitle" id="h.y61q8obx5qn5">
-                <span class="c17">${titlePosition1}</span
-                ><span class="c12">, ${companyName1}, ${cityCompany1}, ${stateCompany1}</span>
+                <span class="c17" style="text-transform: capitalize;">${titlePosition1}</span
+                ><span class="c12" style="text-transform: capitalize;">, ${companyName1}, ${cityCompany1}, <span style="text-transform: uppercase;">${stateCompany1}</span></span>
             </p>
             <p class="c4 c15 subtitle" id="h.9n5l13d32ok4">
-                <span class="c19">${startDate1} &ndash; ${endDate1}</span>
+                <span class="c19" style="text-transform: capitalize;">${startDate1} &ndash; ${endDate1}</span>
             </p>
             <p class="c4 c18"><span class="c12"></span></p>
             <ul class="c2 lst-kix_77hv043s1soz-0 start">

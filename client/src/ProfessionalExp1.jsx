@@ -1,48 +1,54 @@
-
-
+import TextField from "@mui/material/TextField";
+// import * as React from 'react';
+// // import dayjs from 'dayjs';
+// import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+// import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+// import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 
 export default function ProfessionalExp1 ({handleChange , titlePosition1, companyName1, cityCompany1, stateCompany1, startDate1, endDate1, listAccomp1A, listAccomp1B, listAccomp1C, listAccomp1D, listAccomp1E, listAccomp1F}) {
+    
     return (
         <div>
-            <label>
-                Job title
-                <input
-                type="text"
-                placeholder="Administrative Assistant"
-                name="titlePosition1"
-                onChange={handleChange}
-                value={titlePosition1}
+
+            <TextField
+            id="titlePosition1"
+            label="Job Title"
+            placeholder="Ninja Developer"
+            name="titlePosition1"
+            inputProps={{ maxLength: 50 }}
+            onChange={handleChange}
+            value={titlePosition1}
             />
-            </label>
 
-            <label>
-                Company name
-                <input
-                type="text"
-                placeholder="StarCraft Inc."
-                name="companyName1"
-                onChange={handleChange}
-                value={companyName1}
-                />
-            </label>
+            <TextField
+            id="companyName1"
+            label="Company Name"
+            placeholder="Dev Warriors"
+            name="companyName1"
+            inputProps={{ maxLength: 50 }}
+            onChange={handleChange}
+            value={companyName1}
+            />
 
-            <label>
-                Company location
-                <input
-                type="text"
-                placeholder="Toronto"
-                name="cityCompany1"
-                onChange={handleChange}
-                value={cityCompany1}
-                />
-                <input
-                type="text"
-                placeholder="Ontario"
-                name="stateCompany1"
-                onChange={handleChange}
-                value={stateCompany1}
-                />
-            </label>
+            <TextField
+            id="cityCompany1"
+            label="Company Location"
+            placeholder="Toronto"
+            name="cityCompany1"
+            inputProps={{ maxLength: 25 }}
+            onChange={handleChange}
+            value={cityCompany1}
+            />
+
+            <TextField
+            id="stateCompany1"
+            label="Company State/Province"
+            placeholder="ON"
+            name="stateCompany1"
+            inputProps={{ maxLength: 2 }}
+            onChange={handleChange}
+            value={stateCompany1}
+            />
 
             <label>
                 Start date / End Date
@@ -61,6 +67,15 @@ export default function ProfessionalExp1 ({handleChange , titlePosition1, compan
                 value={endDate1}
                 />
             </label>
+            
+            {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <DateTimePicker
+        renderInput={(props) => <TextField {...props} />}
+        label="DateTimePicker"
+        value={startDate1}
+        onChange={handleChange}
+      />
+    </LocalizationProvider> */}
 
             <label>
                 Accomplishment list

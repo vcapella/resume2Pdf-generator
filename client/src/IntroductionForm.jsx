@@ -30,7 +30,7 @@ export default function IntroductionForm ({handleChange, yourName, city, statePr
 
       <TextField
       id="stateProvince"
-      label="Your Province"
+      label="Your State/Province"
       placeholder="ON"
       name="stateProvince"
       inputProps={{ maxLength: 2 }}
@@ -75,17 +75,6 @@ export default function IntroductionForm ({handleChange, yourName, city, statePr
       onChange={handleChange}
       value={anotherUrl}
       />
-
-        {/* <label>
-          Your personal summary
-          <input
-            type="text"
-            placeholder="Insert a brief about your background experience and passions"
-            name="personalSummary"
-            onChange={handleChange}
-            value={personalSummary}
-          />
-        </label> */}
 
       <TextField
       id="outlined-textarea"
