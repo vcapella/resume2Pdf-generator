@@ -1,12 +1,6 @@
 import TextField from "@mui/material/TextField";
-// import * as React from 'react';
-// // import dayjs from 'dayjs';
-// import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-// import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-// import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 
 export default function ProfessionalExp1 ({handleChange , titlePosition1, companyName1, cityCompany1, stateCompany1, startDate1, endDate1, listAccomp1A, listAccomp1B, listAccomp1C, listAccomp1D, listAccomp1E, listAccomp1F}) {
-    
     return (
         <div>
 
@@ -50,78 +44,86 @@ export default function ProfessionalExp1 ({handleChange , titlePosition1, compan
             value={stateCompany1}
             />
 
-            <label>
-                Start date / End Date
-                <input
-                type="text"
-                placeholder="Jan/2020"
-                name="startDate1"
-                onChange={handleChange}
-                value={startDate1}
-                />
-                <input
-                type="text"
-                placeholder="Jan/2022 or Present"
-                name="endDate1"
-                onChange={handleChange}
-                value={endDate1}
-                />
-            </label>
-            
-            {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DateTimePicker
-        renderInput={(props) => <TextField {...props} />}
-        label="DateTimePicker"
-        value={startDate1}
-        onChange={handleChange}
-      />
-    </LocalizationProvider> */}
+            <TextField
+            id="startDate1"
+            label="Start Date"
+            placeholder="Jan/2022"
+            name="startDate1"
+            inputProps={{ maxLength: 8 }}
+            onChange={handleChange}
+            value={startDate1}
+            />
 
-            <label>
-                Accomplishment list
-                <input
-                type="text"
-                placeholder="List accomplishments, not responsibilities"
-                name="listAccomp1A"
-                onChange={handleChange}
-                value={listAccomp1A}
-                />
-                <input
-                type="text"
-                placeholder="Make sure they’re written in a consistent form"
-                name="listAccomp1B"
-                onChange={handleChange}
-                value={listAccomp1B}
-                />
-                <input
-                type="text"
-                placeholder="Use the active voice"
-                name="listAccomp1C"
-                onChange={handleChange}
-                value={listAccomp1C}
-                />
-                <input
-                type="text"
-                placeholder="Quantify results wherever possible"
-                name="listAccomp1D"
-                onChange={handleChange}
-                value={listAccomp1D}
-                />
-                <input
-                type="text"
-                placeholder="Match the language from the job description"
-                name="listAccomp1E"
-                onChange={handleChange}
-                value={listAccomp1E}
-                />
-                <input
-                type="text"
-                placeholder="Another Accomplishment"
-                name="listAccomp1F"
-                onChange={handleChange}
-                value={listAccomp1F}
-                />
-            </label>
+            <TextField
+            id="endDate1"
+            label="End Date/Present"
+            placeholder="Present"
+            name="endDate1"
+            inputProps={{ maxLength: 8 }}
+            onChange={handleChange}
+            value={endDate1}
+            />
+
+            <TextField
+            id="listAccomp1A"
+            label="Accomplishment / Task"
+            placeholder="List accomplishments, not responsibilities"
+            name="listAccomp1A"
+            inputProps={{ maxLength: 120 }}
+            onChange={handleChange}
+            value={listAccomp1A}
+            />
+
+            <TextField
+            id="listAccomp1B"
+            label="Accomplishment / Task"
+            placeholder="Make sure they’re written in a consistent form"
+            name="listAccomp1B"
+            inputProps={{ maxLength: 120 }}
+            onChange={handleChange}
+            value={listAccomp1B}
+            />
+
+            <TextField
+            id="listAccomp1C"
+            label="Accomplishment / Task"
+            placeholder="Use the active voice"
+            name="listAccomp1C"
+            inputProps={{ maxLength: 120 }}
+            onChange={handleChange}
+            value={listAccomp1C}
+            />
+
+            <TextField
+            id="listAccomp1D"
+            label="Accomplishment / Task"
+            placeholder="Quantify results wherever possible"
+            name="listAccomp1D"
+            inputProps={{ maxLength: 120 }}
+            onChange={handleChange}
+            value={listAccomp1D}
+            />
+
+            <TextField
+            id="listAccomp1E"
+            label="Accomplishment / Task"
+            placeholder="Match the language from the job description"
+            name="listAccomp1E"
+            inputProps={{ maxLength: 120 }}
+            onChange={handleChange}
+            value={listAccomp1E}
+            />
+
+            <TextField
+            id="listAccomp1F"
+            label="Accomplishment / Task"
+            placeholder="Another Accomplishment"
+            name="listAccomp1F"
+            inputProps={{ maxLength: 120 }}
+            onChange={handleChange}
+            value={listAccomp1F}
+            />
+
         </div>
     )
 }
