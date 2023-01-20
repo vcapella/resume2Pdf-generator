@@ -1,76 +1,110 @@
-
+import { Card, CardContent, Grid } from "@mui/material";
 import TextField from "@mui/material/TextField";
 
-export default function EducationForm ({handleChange, listOfSkills, schoolName1, stateSchool1, aboutSchoolProgram1, gradYear1, extraAcademicInfo1}) {
-    return (
-      <div>
+export default function EducationForm({
+  handleChange,
+  listOfSkills,
+  schoolName1,
+  stateSchool1,
+  aboutSchoolProgram1,
+  gradYear1,
+  extraAcademicInfo1,
+}) {
+  return (
+    <Card>
+      <CardContent>
+        <Grid container spacing={2}>
+          <Grid xs={12} sm={6} item>
+            <TextField
+              id="listOfSkills"
+              name="listOfSkills"
+              label="Skills"
+              placeholder="Any soft or hard skill"
+              variant="outlined"
+              fullWidth
+              onChange={handleChange}
+              value={listOfSkills}
+              // style={{ width: 520, maxLength: 250 }}
+              inputProps={{ maxLength: 163 }}
+              // each field has width 250 +20 width gap between each
+              multiline
+            />
+          </Grid>
 
-        <TextField
-        id="listOfSkills"
-        label="Skills"
-        placeholder="Any soft or hard skill"
-        name="listOfSkills"
-        onChange={handleChange}
-        value={listOfSkills}
-        style={{ width: 520, maxLength: 250 }}
-        inputProps={{ maxLength: 163 }}
-        // each field has width 250 +20 width gap between each
-        multiline
-        />
+          <Grid xs={12} sm={6} item>
+            <TextField
+              id="schoolName1"
+              name="schoolName1"
+              label="School Name"
+              placeholder="GeorgeBrown College"
+              variant="outlined"
+              fullWidth
+              inputProps={{ maxLength: 50 }}
+              onChange={handleChange}
+              value={schoolName1}
+            />
+          </Grid>
 
-        <TextField
-        id="schoolName1"
-        label="School Name"
-        placeholder="GeorgeBrown College"
-        name="schoolName1"
-        inputProps={{ maxLength: 50 }}
-        onChange={handleChange}
-        value={schoolName1}
-        />
+          <Grid xs={12} sm={6} item>
+            <TextField
+              id="stateSchool1"
+              name="stateSchool1"
+              label="School Location"
+              placeholder="ON, Canada"
+              variant="outlined"
+              fullWidth
+              inputProps={{ maxLength: 30 }}
+              onChange={handleChange}
+              value={stateSchool1}
+            />
+          </Grid>
 
-        <TextField
-        id="stateSchool1"
-        label="School Location"
-        placeholder="ON, Canada"
-        name="stateSchool1"
-        inputProps={{ maxLength: 30 }}
-        onChange={handleChange}
-        value={stateSchool1}
-        />
+          <Grid xs={12} sm={6} item>
+            <TextField
+              id="aboutSchoolProgram1"
+              name="aboutSchoolProgram1"
+              label="School Program"
+              placeholder="BS Computer Science or High School"
+              variant="outlined"
+              fullWidth
+              inputProps={{ maxLength: 50 }}
+              onChange={handleChange}
+              value={aboutSchoolProgram1}
+            />
+          </Grid>
 
-        <TextField
-        id="aboutSchoolProgram1"
-        label="School Program"
-        placeholder="BS Computer Science or High School"
-        name="aboutSchoolProgram1"
-        inputProps={{ maxLength: 50 }}
-        onChange={handleChange}
-        value={aboutSchoolProgram1}
-        />
+          <Grid xs={12} sm={6} item>
+            <TextField
+              id="gradYear1"
+              name="gradYear1"
+              label="Graduation Year"
+              placeholder="2023"
+              variant="outlined"
+              fullWidth
+              inputProps={{ maxLength: 4 }}
+              onChange={handleChange}
+              value={gradYear1}
+            />
+          </Grid>
 
-        <TextField
-        id="gradYear1"
-        label="Graduation Year"
-        placeholder="2023"
-        name="gradYear1"
-        inputProps={{ maxLength: 4 }}
-        onChange={handleChange}
-        value={gradYear1}
-        />
-
-        <TextField
-        id="extraAcademicInfo1"
-        label="Extra Curricuar Activity"
-        placeholder="Write about any extra curricular activity or project."
-        name="extraAcademicInfo1"
-        onChange={handleChange}
-        value={extraAcademicInfo1}
-        style={{ width: 520, maxLength: 250 }}
-        inputProps={{ maxLength: 163 }}
-        // each field has width 250 +20 width gap between each
-        multiline
-        />
-
-      </div>
-    )
+          <Grid xs={12} sm={6} item>
+            <TextField
+              id="extraAcademicInfo1"
+              name="extraAcademicInfo1"
+              label="Extra Curricuar Activity"
+              placeholder="Write about any extra curricular activity or project."
+              variant="outlined"
+              fullWidth
+              onChange={handleChange}
+              value={extraAcademicInfo1}
+              // style={{ width: 520, maxLength: 250 }}
+              inputProps={{ maxLength: 163 }}
+              // each field has width 250 +20 width gap between each
+              multiline
+            />
+          </Grid>
+        </Grid>
+      </CardContent>
+    </Card>
+  );
 }

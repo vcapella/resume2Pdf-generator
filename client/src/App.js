@@ -122,11 +122,12 @@ function App() {
   return (
     <Box
       component="form"
-      sx={{
-        "& .MuiTextField-root": { m: 1, width: "25ch" },
-      }}
-      noValidate
-      autoComplete="off"
+      // sx={{   (USE ON JSX FILES)
+      //   "& .MuiTextField-root": { m: 1, width: "25ch" },  (USE ON JSX FILES)
+      // }}  (USE ON JSX FILES)
+
+      // noValidate  (USE ON JSX FILES)
+      // autoComplete="off"   (USE ON JSX FILES)
       // onSubmit={createAndDownloadPdf}
     >
       {/* <form onSubmit={createAndDownloadPdf}> */}
