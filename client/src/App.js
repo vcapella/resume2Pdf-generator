@@ -2,12 +2,13 @@
 import axios from "axios";
 import { saveAs } from "file-saver";
 import { useState } from "react";
-import Box from "@mui/material/Box";
+// import Box from "@mui/material/Box";
 // import TextField from "@mui/material/TextField";
 import IntroductionForm from "./IntroductionForm";
 import ProfessionalExp1 from "./ProfessionalExp1";
 import ProfessionalExp2 from "./ProfessionalExp2";
 import EducationForm from "./EducationForm";
+import { Card } from "@mui/material";
 // import Input from "@mui/material/Input";
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
     listAccomp1C: "",
     listAccomp1D: "",
     listAccomp1E: "",
-    listAccomp1F: "",
+    // listAccomp1F: "",
     titlePosition2: "",
     companyName2: "",
     cityCompany2: "",
@@ -44,7 +45,7 @@ function App() {
     listAccomp2C: "",
     listAccomp2D: "",
     listAccomp2E: "",
-    listAccomp2F: "",
+    // listAccomp2F: "",
     listOfSkills: "",
     gradYear1: "",
     schoolName1: "",
@@ -85,7 +86,7 @@ function App() {
     listAccomp1C,
     listAccomp1D,
     listAccomp1E,
-    listAccomp1F,
+    // listAccomp1F,
     titlePosition2,
     companyName2,
     cityCompany2,
@@ -97,7 +98,7 @@ function App() {
     listAccomp2C,
     listAccomp2D,
     listAccomp2E,
-    listAccomp2F,
+    // listAccomp2F,
     listOfSkills,
     gradYear1,
     schoolName1,
@@ -120,7 +121,7 @@ function App() {
   };
 
   return (
-    <Box
+    <Card
       component="form"
       // sx={{   (USE ON JSX FILES)
       //   "& .MuiTextField-root": { m: 1, width: "25ch" },  (USE ON JSX FILES)
@@ -164,7 +165,7 @@ function App() {
           listAccomp1C={listAccomp1C}
           listAccomp1D={listAccomp1D}
           listAccomp1E={listAccomp1E}
-          listAccomp1F={listAccomp1F}
+          // listAccomp1F={listAccomp1F}
         />
       </div>
       <div className="professionalExp2">
@@ -172,18 +173,18 @@ function App() {
 
         <ProfessionalExp2
           handleChange={handleChange}
-          titlePosition1={titlePosition2}
-          companyName1={companyName2}
-          cityCompany1={cityCompany2}
-          stateCompany1={stateCompany2}
-          startDate1={startDate2}
-          endDate1={endDate2}
-          listAccomp1A={listAccomp2A}
-          listAccomp1B={listAccomp2B}
-          listAccomp1C={listAccomp2C}
-          listAccomp1D={listAccomp2D}
-          listAccomp1E={listAccomp2E}
-          listAccomp1F={listAccomp2F}
+          titlePosition2={titlePosition2}
+          companyName2={companyName2}
+          cityCompany2={cityCompany2}
+          stateCompany2={stateCompany2}
+          startDate2={startDate2}
+          endDate2={endDate2}
+          listAccomp2A={listAccomp2A}
+          listAccomp2B={listAccomp2B}
+          listAccomp2C={listAccomp2C}
+          listAccomp2D={listAccomp2D}
+          listAccomp2E={listAccomp2E}
+          // listAccomp2F={listAccomp2F}
         />
       </div>
       <div className="Education">
@@ -197,14 +198,15 @@ function App() {
           aboutSchoolProgram1={aboutSchoolProgram1}
           gradYear1={gradYear1}
           extraAcademicInfo1={extraAcademicInfo1}
+          DownloadBtn={createAndDownloadPdf}
         />
       </div>
 
-      <button type="button" onClick={createAndDownloadPdf}>
+      {/* <button type="button" onClick={createAndDownloadPdf}>
         Submit
-      </button>
+      </button> OLD BUTTON*/}
       {/* </form> */}
-    </Box>
+    </Card>
   );
 }
 
