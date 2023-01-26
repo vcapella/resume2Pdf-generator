@@ -113,7 +113,7 @@ export default function ProfessionalExp1({
 					placeholder="List accomplishments, not responsibilities"
 					variant="outlined"
 					fullWidth
-					inputProps={{ maxLength: 83 }}
+					inputProps={{ maxLength: 75 }}
 					onChange={handleChange}
 					value={listAccomp1A}
 				/>
@@ -127,7 +127,7 @@ export default function ProfessionalExp1({
 					placeholder="Make sure they’re written in a consistent form"
 					variant="outlined"
 					fullWidth
-					inputProps={{ maxLength: 83 }}
+					inputProps={{ maxLength: 75 }}
 					onChange={handleChange}
 					value={listAccomp1B}
 				/>
@@ -141,7 +141,7 @@ export default function ProfessionalExp1({
 					placeholder="Use the active voice"
 					variant="outlined"
 					fullWidth
-					inputProps={{ maxLength: 83 }}
+					inputProps={{ maxLength: 75 }}
 					onChange={handleChange}
 					value={listAccomp1C}
 				/>
@@ -155,7 +155,7 @@ export default function ProfessionalExp1({
 					placeholder="Quantify results wherever possible"
 					variant="outlined"
 					fullWidth
-					inputProps={{ maxLength: 83 }}
+					inputProps={{ maxLength: 75 }}
 					onChange={handleChange}
 					value={listAccomp1D}
 				/>
@@ -169,7 +169,7 @@ export default function ProfessionalExp1({
 					placeholder="Match the language from the job description"
 					variant="outlined"
 					fullWidth
-					inputProps={{ maxLength: 83 }}
+					inputProps={{ maxLength: 75 }}
 					onChange={handleChange}
 					value={listAccomp1E}
 				/>

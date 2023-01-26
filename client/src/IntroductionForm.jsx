@@ -20,6 +20,7 @@ export default function IntroductionForm({
     <Grid container spacing={2}>
       <Grid xs={12} item>
         <TextField
+          required
           id="yourName"
           name="yourName"
           label="First and Last Name"
@@ -37,6 +38,7 @@ export default function IntroductionForm({
 
       <Grid xs={12} sm={6} item>
         <TextField
+          required
           id="city"
           name="city"
           label="Your City"
@@ -51,6 +53,7 @@ export default function IntroductionForm({
 
       <Grid xs={12} sm={6} item>
         <TextField
+          required
           id="stateProvince"
           name="stateProvince"
           label="Your State/Province"
@@ -66,6 +69,7 @@ export default function IntroductionForm({
       <Grid xs={12} sm={6} item>
         {/* review number format */}
         <TextField
+          required
           id="celNumber"
           name="celNumber"
           label="Phone Number"
@@ -80,8 +84,8 @@ export default function IntroductionForm({
 
       <Grid xs={12} sm={6} item>
         <TextField
-          type="email"
           required
+          type="email"
           id="emailAdd"
           name="emailAdd"
           label="Email"
@@ -95,6 +99,8 @@ export default function IntroductionForm({
 
       <Grid xs={12} sm={6} item>
         <TextField
+          required
+          type="url"
           id="linkedinUrl"
           name="linkedinUrl"
           label="LinkedIn URL"
@@ -108,6 +114,7 @@ export default function IntroductionForm({
 
       <Grid xs={12} sm={6} item>
         <TextField
+          type="url"
           id="anotherUrl"
           name="anotherUrl"
           label="Social Media or Portfolio URL"
@@ -121,6 +128,7 @@ export default function IntroductionForm({
 
       <Grid xs={12} item>
         <TextField
+          required
           id="personalSummary"
           name="personalSummary"
           label="About Me"
@@ -130,7 +138,7 @@ export default function IntroductionForm({
           onChange={handleChange}
           value={personalSummary}
           // style={{ width: 520 }}
-          inputProps={{ maxLength: 410 }}
+          inputProps={{ maxLength: 400 }}
           // each field has width 250 +20 width gap between each
           multiline
         />

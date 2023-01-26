@@ -11,7 +11,7 @@ export default function EducationForm({
   aboutSchoolProgram1,
   gradYear1,
   extraAcademicInfo1,
-  DownloadBtn
+  // DownloadBtn
 }) {
   return (
 
@@ -95,7 +95,6 @@ export default function EducationForm({
 
       <Grid xs={12} item>
         <TextField
-          filled
           required={true}
           type="text"
           id="extraAcademicInfo1"
@@ -114,7 +113,7 @@ export default function EducationForm({
       </Grid>
 
       <Grid xs={12} item>
-        <Button type="submit" variant="contained" color="success" fullWidth onClick={DownloadBtn}>Submit/Download</Button>
+        <Button type="submit" variant="contained" color="success" fullWidth Validate >Submit/Download</Button>
       </Grid>
 
     </Grid>

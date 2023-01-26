@@ -8,7 +8,7 @@ import IntroductionForm from "./IntroductionForm";
 import ProfessionalExp1 from "./ProfessionalExp1";
 import ProfessionalExp2 from "./ProfessionalExp2";
 import EducationForm from "./EducationForm";
-import { Card, CardContent, FormControl } from "@mui/material";
+import { Card, CardContent } from "@mui/material";
 // import Input from "@mui/material/Input";
 
 function App() {
@@ -122,18 +122,17 @@ function App() {
 
   return (
     <Card
-      component="form"
-      // sx={{   (USE ON JSX FILES)
-      //   "& .MuiTextField-root": { m: 1, width: "25ch" },  (USE ON JSX FILES)
-      // }}  (USE ON JSX FILES)
+    // component="form"
+    // sx={{   (USE ON JSX FILES)
+    //   "& .MuiTextField-root": { m: 1, width: "25ch" },  (USE ON JSX FILES)
+    // }}  (USE ON JSX FILES)
 
-      // noValidate
-      // autoComplete="off"
-      // onSubmit={createAndDownloadPdf}
+    // noValidate
+    // autoComplete="off"
+    // onSubmit={createAndDownloadPdf}
     >
-      {/* <form onSubmit={createAndDownloadPdf}> */}
       <CardContent>
-        <FormControl>
+        <form autoComplete="off" onSubmit={createAndDownloadPdf}>
           {/* <Grid container spacing={2}> */}
           <div className="Introduction">
             <h2> Introduction</h2>
@@ -152,7 +151,7 @@ function App() {
           </div>
 
           <div className="professionalExp">
-            <h2>Professional Experience</h2>
+            <h2>Experience</h2>
 
             <ProfessionalExp1
               handleChange={handleChange}
@@ -171,7 +170,7 @@ function App() {
             />
           </div>
           <div className="professionalExp2">
-            <h2>Professional Experience 2</h2>
+            <h2>Experience 2</h2>
 
             <ProfessionalExp2
               handleChange={handleChange}
@@ -200,16 +199,12 @@ function App() {
               aboutSchoolProgram1={aboutSchoolProgram1}
               gradYear1={gradYear1}
               extraAcademicInfo1={extraAcademicInfo1}
-              DownloadBtn={createAndDownloadPdf}
+              // DownloadBtn={createAndDownloadPdf}
             />
           </div>
 
-          {/* <button type="button" onClick={createAndDownloadPdf}>
-        Submit
-      </button> OLD BUTTON*/}
-          {/* </form> */}
           {/* </Grid> */}
-        </FormControl>
+        </form>
       </CardContent>
     </Card>
   );
