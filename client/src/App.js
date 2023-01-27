@@ -8,7 +8,7 @@ import IntroductionForm from "./IntroductionForm";
 import ProfessionalExp1 from "./ProfessionalExp1";
 import ProfessionalExp2 from "./ProfessionalExp2";
 import EducationForm from "./EducationForm";
-import { Card, CardContent } from "@mui/material";
+import { Card, Typography, CardContent } from "@mui/material";
 // import Input from "@mui/material/Input";
 
 function App() {
@@ -121,22 +121,16 @@ function App() {
   };
 
   return (
-    <Card
-    // component="form"
-    // sx={{   (USE ON JSX FILES)
-    //   "& .MuiTextField-root": { m: 1, width: "25ch" },  (USE ON JSX FILES)
-    // }}  (USE ON JSX FILES)
-
-    // noValidate
-    // autoComplete="off"
-    // onSubmit={createAndDownloadPdf}
-    >
+    <Card style={{ maxWidth: 450, margin: "0 auto" }}>
       <CardContent>
+        <Typography variant="h3" align="center">
+          PDF my resume
+        </Typography>
         <form autoComplete="off" onSubmit={createAndDownloadPdf}>
-          {/* <Grid container spacing={2}> */}
-          <div className="Introduction">
-            <h2> Introduction</h2>
-
+          <Card className="Introduction">
+            <Typography variant="h5" align="center">
+              Introduction
+            </Typography>
             <IntroductionForm
               yourName={yourName}
               handleChange={handleChange}
@@ -148,11 +142,12 @@ function App() {
               anotherUrl={anotherUrl}
               personalSummary={personalSummary}
             />
-          </div>
+          </Card>
 
-          <div className="professionalExp">
-            <h2>Experience</h2>
-
+          <Card className="professionalExp">
+            <Typography variant="h5" align="center">
+              Experience
+            </Typography>
             <ProfessionalExp1
               handleChange={handleChange}
               titlePosition1={titlePosition1}
@@ -168,10 +163,12 @@ function App() {
               listAccomp1E={listAccomp1E}
               // listAccomp1F={listAccomp1F}
             />
-          </div>
-          <div className="professionalExp2">
-            <h2>Experience 2</h2>
+          </Card>
 
+          <Card className="professionalExp2">
+            <Typography variant="h5" align="center">
+              Experience 2
+            </Typography>
             <ProfessionalExp2
               handleChange={handleChange}
               titlePosition2={titlePosition2}
@@ -187,10 +184,12 @@ function App() {
               listAccomp2E={listAccomp2E}
               // listAccomp2F={listAccomp2F}
             />
-          </div>
-          <div className="Education">
-            <h2>Education</h2>
+          </Card>
 
+          <Card className="Education">
+            <Typography variant="h5" align="center">
+              Education
+            </Typography>
             <EducationForm
               handleChange={handleChange}
               listOfSkills={listOfSkills}
@@ -201,9 +200,7 @@ function App() {
               extraAcademicInfo1={extraAcademicInfo1}
               // DownloadBtn={createAndDownloadPdf}
             />
-          </div>
-
-          {/* </Grid> */}
+          </Card>
         </form>
       </CardContent>
     </Card>
