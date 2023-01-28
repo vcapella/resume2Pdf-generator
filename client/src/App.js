@@ -9,8 +9,16 @@ import ProfessionalExp1 from "./ProfessionalExp1";
 import ProfessionalExp2 from "./ProfessionalExp2";
 import EducationForm from "./EducationForm";
 import { Card, CardContent } from "@mui/material";
-import NavAppBar from "./NavAppBar";
+import DarkBtnBar from "./DarkBtnBar";
 // import Input from "@mui/material/Input";
+import * as React from "react";
+import IconButton from "@mui/material/IconButton";
+// import Box from '@mui/material/Box';
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+
+const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
 function App() {
   //useState
@@ -109,7 +117,7 @@ function App() {
   } = formValue;
 
   //blobs are immutable objects that represent raw data
-  //save function
+  //save/download function
   const createAndDownloadPdf = (event) => {
     event.preventDefault(); //prevent page to auto refresh and erase data
     axios
@@ -121,74 +129,111 @@ function App() {
       });
   };
 
+  //light and dark mode
+  const [mode, setMode] = React.useState("light");
+  const colorMode = React.useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+      },
+    }),
+    []
+  );
+  //pallete for dark/light mode
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+        },
+      }),
+    [mode]
+  );
+
   return (
-    <Card sx={{ backgroundColor: "lightblue" }}>
-      <NavAppBar />
-      <CardContent
-        sx={{
-          maxWidth: 500,
-          margin: "0 auto",
-          padding: "0px 5px",
-        }}
-      >
-        <form autoComplete="off" onSubmit={createAndDownloadPdf}>
-          <IntroductionForm
-            yourName={yourName}
-            handleChange={handleChange}
-            city={city}
-            stateProvince={stateProvince}
-            celNumber={celNumber}
-            emailAdd={emailAdd}
-            linkedinUrl={linkedinUrl}
-            anotherUrl={anotherUrl}
-            personalSummary={personalSummary}
-          />
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <Card>
+          {theme.palette.mode} mode
+          <IconButton
+            sx={{ ml: 1 }}
+            onClick={colorMode.toggleColorMode}
+            color="inherit"
+          >
+            {theme.palette.mode === "dark" ? (
+              <Brightness7Icon />
+            ) : (
+              <Brightness4Icon />
+            )}
+          </IconButton>
+          <DarkBtnBar />
+          <CardContent
+            sx={{
+              maxWidth: 500,
+              margin: "0 auto",
+              padding: "0px 5px",
+            }}
+          >
+            <form autoComplete="off" onSubmit={createAndDownloadPdf}>
+              <IntroductionForm
+                yourName={yourName}
+                handleChange={handleChange}
+                city={city}
+                stateProvince={stateProvince}
+                celNumber={celNumber}
+                emailAdd={emailAdd}
+                linkedinUrl={linkedinUrl}
+                anotherUrl={anotherUrl}
+                personalSummary={personalSummary}
+              />
 
-          <ProfessionalExp1
-            handleChange={handleChange}
-            titlePosition1={titlePosition1}
-            companyName1={companyName1}
-            cityCompany1={cityCompany1}
-            stateCompany1={stateCompany1}
-            startDate1={startDate1}
-            endDate1={endDate1}
-            listAccomp1A={listAccomp1A}
-            listAccomp1B={listAccomp1B}
-            listAccomp1C={listAccomp1C}
-            listAccomp1D={listAccomp1D}
-            listAccomp1E={listAccomp1E}
-            // listAccomp1F={listAccomp1F}
-          />
+              <ProfessionalExp1
+                handleChange={handleChange}
+                titlePosition1={titlePosition1}
+                companyName1={companyName1}
+                cityCompany1={cityCompany1}
+                stateCompany1={stateCompany1}
+                startDate1={startDate1}
+                endDate1={endDate1}
+                listAccomp1A={listAccomp1A}
+                listAccomp1B={listAccomp1B}
+                listAccomp1C={listAccomp1C}
+                listAccomp1D={listAccomp1D}
+                listAccomp1E={listAccomp1E}
+                // listAccomp1F={listAccomp1F}
+              />
 
-          <ProfessionalExp2
-            handleChange={handleChange}
-            titlePosition2={titlePosition2}
-            companyName2={companyName2}
-            cityCompany2={cityCompany2}
-            stateCompany2={stateCompany2}
-            startDate2={startDate2}
-            endDate2={endDate2}
-            listAccomp2A={listAccomp2A}
-            listAccomp2B={listAccomp2B}
-            listAccomp2C={listAccomp2C}
-            listAccomp2D={listAccomp2D}
-            listAccomp2E={listAccomp2E}
-            // listAccomp2F={listAccomp2F}
-          />
+              <ProfessionalExp2
+                handleChange={handleChange}
+                titlePosition2={titlePosition2}
+                companyName2={companyName2}
+                cityCompany2={cityCompany2}
+                stateCompany2={stateCompany2}
+                startDate2={startDate2}
+                endDate2={endDate2}
+                listAccomp2A={listAccomp2A}
+                listAccomp2B={listAccomp2B}
+                listAccomp2C={listAccomp2C}
+                listAccomp2D={listAccomp2D}
+                listAccomp2E={listAccomp2E}
+                // listAccomp2F={listAccomp2F}
+              />
 
-          <EducationForm
-            handleChange={handleChange}
-            listOfSkills={listOfSkills}
-            schoolName1={schoolName1}
-            stateSchool1={stateSchool1}
-            aboutSchoolProgram1={aboutSchoolProgram1}
-            gradYear1={gradYear1}
-            extraAcademicInfo1={extraAcademicInfo1}
-            // DownloadBtn={createAndDownloadPdf}
-          />
-        </form>
-      </CardContent>
-    </Card>
+              <EducationForm
+                handleChange={handleChange}
+                listOfSkills={listOfSkills}
+                schoolName1={schoolName1}
+                stateSchool1={stateSchool1}
+                aboutSchoolProgram1={aboutSchoolProgram1}
+                gradYear1={gradYear1}
+                extraAcademicInfo1={extraAcademicInfo1}
+                // DownloadBtn={createAndDownloadPdf}
+              />
+            </form>
+          </CardContent>
+        </Card>
+      </ThemeProvider>
+    </ColorModeContext.Provider>
   );
 }
 

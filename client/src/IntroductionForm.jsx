@@ -18,8 +18,7 @@ export default function IntroductionForm({
     <Card className="Introduction"
       sx={{
         boxShadow: 0,
-        p: "10px 10px",
-        backgroundColor: "gray",
+        p: "10px 10px"
       }}>
       <Typography
         variant="h5"
