@@ -34,7 +34,7 @@ export default function EducationForm({
             onChange={handleChange}
             value={listOfSkills}
             // style={{ width: 520, maxLength: 250 }}
-            inputProps={{ maxLength: 163 }}
+            inputProps={{ maxLength: 160 }}
             // each field has width 250 +20 width gap between each
             multiline
           />
@@ -112,14 +112,14 @@ export default function EducationForm({
             onChange={handleChange}
             value={extraAcademicInfo1}
             // style={{ width: 520, maxLength: 250 }}
-            inputProps={{ maxLength: 163 }}
+            inputProps={{ maxLength: 160 }}
             // each field has width 250 +20 width gap between each
             multiline
           />
         </Grid>
 
         <Grid xs={12} item sx={{ mt: "10%" }} align="center">
-          <Button type="submit" variant="contained" Validate sx={{ minWidth: "300px", backgroundColor: "#424242" }}>Submit</Button>
+          <Button type="submit" variant="contained" sx={{ minWidth: "300px", backgroundColor: "#424242" }}>Submit</Button>
         </Grid>
 
       </Grid>
