@@ -1,6 +1,4 @@
 import { TextField, Grid, Card, Typography } from "@mui/material";
-// import TextField from "@mui/material/TextField";
-// import TextareaAutosize from '@mui/base/TextareaAutosize';
 
 export default function IntroductionForm({
   handleChange,

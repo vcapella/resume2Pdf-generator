@@ -1,5 +1,4 @@
 import { TextField, Grid, Card, Typography } from "@mui/material";
-// import TextField from "@mui/material/TextField";
 
 export default function ProfessionalExp1({
 	handleChange,
@@ -36,7 +35,7 @@ export default function ProfessionalExp1({
 						placeholder="Ninja Developer"
 						variant="outlined"
 						fullWidth
-						inputProps={{ maxLength: 50 }}
+						inputProps={{ maxLength: 30 }}
 						onChange={handleChange}
 						value={titlePosition1}
 					/>
@@ -50,7 +49,7 @@ export default function ProfessionalExp1({
 						placeholder="Dev Warriors"
 						variant="outlined"
 						fullWidth
-						inputProps={{ maxLength: 50 }}
+						inputProps={{ maxLength: 30 }}
 						onChange={handleChange}
 						value={companyName1}
 					/>
@@ -64,7 +63,7 @@ export default function ProfessionalExp1({
 						placeholder="Toronto"
 						variant="outlined"
 						fullWidth
-						inputProps={{ maxLength: 25 }}
+						inputProps={{ maxLength: 20 }}
 						onChange={handleChange}
 						value={cityCompany1}
 					/>

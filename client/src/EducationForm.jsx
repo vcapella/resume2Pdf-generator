@@ -1,7 +1,4 @@
 import { TextField, Grid, Button, Card, Typography } from "@mui/material";
-// import TextField from "@mui/material/TextField";
-// import Button from '@mui/material/Button';
-
 
 export default function EducationForm({
   handleChange,
@@ -122,7 +119,7 @@ export default function EducationForm({
         </Grid>
 
         <Grid xs={12} item sx={{ mt: "10%" }} align="center">
-          <Button type="submit" variant="contained" Validate sx={{ minWidth: "300px" }}>Submit/Download</Button>
+          <Button type="submit" variant="contained" Validate sx={{ minWidth: "300px", backgroundColor: "#424242" }}>Submit</Button>
         </Grid>
 
       </Grid>

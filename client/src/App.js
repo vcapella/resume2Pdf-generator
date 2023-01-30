@@ -1,22 +1,14 @@
-// import "./App.css";
+import * as React from "react";
 import axios from "axios";
 import { saveAs } from "file-saver";
 import { useState } from "react";
-// import Box from "@mui/material/Box";
-// import TextField from "@mui/material/TextField";
 import IntroductionForm from "./IntroductionForm";
 import ProfessionalExp1 from "./ProfessionalExp1";
 import ProfessionalExp2 from "./ProfessionalExp2";
 import EducationForm from "./EducationForm";
-import { Card, CardContent } from "@mui/material";
 import DarkBtnBar from "./DarkBtnBar";
-// import Input from "@mui/material/Input";
-import * as React from "react";
-import IconButton from "@mui/material/IconButton";
-// import Box from '@mui/material/Box';
+import { Card, CardContent } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import Brightness4Icon from "@mui/icons-material/Brightness4";
-import Brightness7Icon from "@mui/icons-material/Brightness7";
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
@@ -154,19 +146,7 @@ function App() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <Card>
-          {theme.palette.mode} mode
-          <IconButton
-            sx={{ ml: 1 }}
-            onClick={colorMode.toggleColorMode}
-            color="inherit"
-          >
-            {theme.palette.mode === "dark" ? (
-              <Brightness7Icon />
-            ) : (
-              <Brightness4Icon />
-            )}
-          </IconButton>
-          <DarkBtnBar />
+          <DarkBtnBar colorMode={colorMode} theme={theme} />
           <CardContent
             sx={{
               maxWidth: 500,
