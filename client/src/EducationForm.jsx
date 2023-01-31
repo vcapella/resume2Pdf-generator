@@ -119,7 +119,7 @@ export default function EducationForm({
         </Grid>
 
         <Grid xs={12} item sx={{ mt: "10%" }} align="center">
-          <Button type="submit" variant="contained" sx={{ minWidth: "300px", backgroundColor: "#424242" }}>Submit</Button>
+          <Button type="submit" variant="contained" sx={{ minWidth: "300px", backgroundColor: "primary" }}>Submit</Button>
         </Grid>
 
       </Grid>
