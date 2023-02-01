@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd client && npm start",
     "backend": "cd server && nodemon index.js",
+    "build": "cd client && npm run build",
     "dev": "concurrently \"npm run backend\" \"npm run client\""
   },
   "repository": {
