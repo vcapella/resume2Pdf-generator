@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/vcapella/resume2Pdf-generator/issues"
   },
-  "homepage": "./",
+  "homepage": ".",
   "dependencies": {
     "concurrently": "^7.2.2"
   }
