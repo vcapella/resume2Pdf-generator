@@ -113,7 +113,7 @@ function App() {
   const createAndDownloadPdf = (event) => {
     event.preventDefault(); //prevent page to auto refresh and erase data
     axios
-      .post(process.env.REACT_APP_API_URL + "/create-pdf", formValue)
+      .post(process.env.REACT_APP_API_URL, formValue)
       .then(() => axios.get("fetch-pdf", { responseType: "blob" }))
       .then((res) => {
         const pdfBlob = new Blob([res.data], { type: "application/pdf" });
